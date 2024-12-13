@@ -11,31 +11,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.productcatalogue.api.models.Produit;
-import com.productcatalogue.api.repository.ProduitRepository;
+import com.productcatalogue.api.services.ProduitService;
 
 @RestController
 @RequestMapping("/produits")
 public class ProduitController {
-    
-    @Autowired
-    private ProduitRepository produitRepository;
 
-    // Récupération de tous les produits
+    @Autowired
+    private ProduitService produitService;
+
+    // Récupération des produits
     @GetMapping
     public List<Produit> getAllProduits() {
-        return produitRepository.findAll();
+        return produitService.getAllProduits();
     }
-    
-    // Ajout de produit
-    @PostMapping("/ajoutProduit")
+
+    // Ajout d'un produit
+    @PostMapping
     public Produit addProduit(@RequestBody Produit produit) {
-        return produitRepository.save(produit);
+        return produitService.addProduit(produit);
     }
 
-    // Recupération de produit par catégorie
-    @GetMapping("/{categorie}")
-    public List<Produit> getProduitsByCategorie(@PathVariable String categorie) {
-        return produitRepository.findByCategorie(categorie);
+    // Récupération des produits par catégorie
+    @GetMapping("/categorie/{categorieId}")
+    public List<Produit> getProduitsByCategorie(@PathVariable Long categorieId) {
+        return produitService.getProduitsByCategorie(categorieId);
     }
-
 }
