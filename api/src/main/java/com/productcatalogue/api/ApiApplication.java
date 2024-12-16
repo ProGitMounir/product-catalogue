@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.productcatalogue.api.models.Categorie;
 import com.productcatalogue.api.repositories.CategorieRepository;
-import com.productcatalogue.api.repositories.ProduitRepository;
 
 @SpringBootApplication
 public class ApiApplication implements CommandLineRunner{

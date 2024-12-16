@@ -1,0 +1,59 @@
+/* Applique un style global */  
+  /* Conteneur principal simulant un carré */
+  .container {
+    width: 90%; /* Largeur du "carré" */
+    max-width: 800px; /* Limite la largeur sur les grands écrans */
+    min-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile pour donner un effet de relief */
+    border-radius: 10px; /* Coins légèrement arrondis */
+    padding: 30px; /* Espacement interne pour que le contenu respire */
+    text-align: center; /* Centre le texte horizontalement */
+    position: relative;
+    top: -150px; /* Lève légèrement le carré pour qu'il soit plus haut */
+  }
+  
+  /* Titre principal */
+  .title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Menu de navigation */
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espacement entre les éléments du menu */
+    margin-bottom: 2rem;
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menu-item:hover {
+    color: #0056b3;
+  }
+  
+  /* Ligne horizontale */
+  hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 2rem 0;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 3rem; /* Augmente l'espace entre le contenu principal et le footer */
+  }
+  
+  .footer {
+    font-size: 1rem;
+    color: #666;
+  }
+  

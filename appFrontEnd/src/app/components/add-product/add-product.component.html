@@ -1,0 +1,67 @@
+<div class="form-container">
+  <h2>Ajout d'un nouveau produit :</h2>
+  <form (ngSubmit)="onProductSave()" [formGroup]="productForm">
+    <!-- Référence -->
+    <div class="form-group">
+      <label for="reference">Référence :</label>
+      <input
+        type="text"
+        formControlName="reference"
+        id="reference"
+        name="reference"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description :</label>
+      <input
+        type="text"
+        formControlName="description"
+        id="description"
+        name="description"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Prix Unitaire -->
+    <div class="form-group">
+      <label for="prixUnitaire">Prix Unitaire :</label>
+      <input
+        type="number"
+        formControlName="prixUnitaire"
+        id="prixUnitaire"
+        name="prixUnitaire"
+        class="form-control"
+        required
+        min="0"
+      />
+    </div>
+
+    
+    <div class="form-group">
+      <label for="categorie">Catégorie :</label>
+      <select
+        formControlName="categorie"
+        id="categorie"
+        name="categorie"
+        class="form-control"
+        required
+      >
+        <option *ngFor="let categorie of categorieList" [value]="categorie.id">
+          {{ categorie.nom }}
+        </option>
+      </select>
+    </div>
+
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]="!productForm.valid">
+        Ajouter
+      </button>
+    </div>
+  </form>
+</div>

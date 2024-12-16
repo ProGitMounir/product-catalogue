@@ -1,0 +1,10 @@
+.lorem {
+    max-width: 800px; /* Limite la largeur pour forcer le texte à se répartir sur plusieurs lignes */
+    margin: 0 auto; /* Centre horizontalement le paragraphe */
+    text-align: center; /* Centre le texte dans son conteneur */
+    line-height: 1.8; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
+    font-size: 1.1rem; /* Taille de police adaptée pour le confort de lecture */
+    color: #333; /* Couleur du texte */
+    padding: 1rem; /* Espacement interne pour éviter que le texte touche les bords */
+  }
+  
