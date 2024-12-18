@@ -11,3 +11,14 @@ Application Web pour la gestion d'un catalogue produits, développée avec Sprin
 
 ## page Ajout d'un produit :
 ![ajoutProduit](https://github.com/user-attachments/assets/e73affca-0bf9-46ae-8558-6bf8dcbc1f7f)
+
+
+## Instructions pour exécuter l'application
+
+    Démarrer le backend (API)
+        Naviguez dans le répertoire api/ : cd api
+        puis : ./mvnw spring-boot:run
+
+    Démarrer le frontend
+        Accédez au répertoire appFrontEnd/ : cd appFrontend
+        suivis de : ng serve
