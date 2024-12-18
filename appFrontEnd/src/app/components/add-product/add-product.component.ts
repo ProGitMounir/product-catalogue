@@ -53,6 +53,12 @@ export class AddProductComponent {
         console.log('Produit créé avec succès :', response);
     });
 
+    this.productForm.reset({
+      reference: '',
+      description: '',
+      prixUnitaire: '',
+      categorie: '',
+    });
   }
 
 }

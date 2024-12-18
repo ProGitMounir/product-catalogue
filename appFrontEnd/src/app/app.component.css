@@ -1,16 +1,15 @@
-/* Applique un style global */  
-  /* Conteneur principal simulant un carré */
+  
   .container {
-    width: 90%; /* Largeur du "carré" */
-    max-width: 800px; /* Limite la largeur sur les grands écrans */
+    width: 90%;
+    max-width: 800px;
     min-width: 800px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile pour donner un effet de relief */
-    border-radius: 10px; /* Coins légèrement arrondis */
-    padding: 30px; /* Espacement interne pour que le contenu respire */
-    text-align: center; /* Centre le texte horizontalement */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    padding: 30px; 
+    text-align: center; 
     position: relative;
-    top: -150px; /* Lève légèrement le carré pour qu'il soit plus haut */
+    top: -30px; 
   }
   
   /* Titre principal */
@@ -24,7 +23,7 @@
   .menu {
     display: flex;
     justify-content: center;
-    gap: 1.5rem; /* Espacement entre les éléments du menu */
+    gap: 1.5rem; 
     margin-bottom: 2rem;
   }
   
@@ -49,7 +48,7 @@
   
   /* Footer */
   footer {
-    margin-top: 3rem; /* Augmente l'espace entre le contenu principal et le footer */
+    margin-top: 3rem; 
   }
   
   .footer {

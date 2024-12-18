@@ -1,0 +1,72 @@
+/* Conteneur principal du formulaire */
+.form-container {
+    max-width: 500px; /* Largeur maximale du formulaire */
+    margin: 50px auto; /* Centrer le formulaire */
+    padding: 20px;
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Couleur de fond */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  /* Titre du formulaire */
+  .form-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Groupe de champs */
+  .form-group {
+    margin-bottom: 15px; /* Espacement entre chaque champ */
+  }
+  
+  /* Labels */
+  .form-group label {
+    display: block; /* Met le label en haut */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Champs input et select */
+  .form-group input,
+  .form-group select {
+    width: 100%; /* Prend toute la largeur */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Coins légèrement arrondis */
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Effet lumineux */
+  }
+  
+  /* Bouton Ajouter */
+  .btn {
+    width: 100%; /* Largeur totale */
+    padding: 10px;
+    background-color: #007bff; /* Couleur principale */
+    color: #fff; /* Texte en blanc */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:disabled {
+    background-color: #ccc; /* Grisé quand désactivé */
+    cursor: not-allowed;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+  }
+  

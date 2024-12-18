@@ -1,1 +1,49 @@
-<h3>list-product page</h3>
+<div class="product-list-container">
+    <!--Filtre par catégorie-->
+    <div class="filter-container">
+        <label for="categorySelect">Catégorie :</label>
+        <select
+          id="categorySelect"
+          class="form-control" [(ngModel)]="selectedCategoryId" (change)="onCategoryChange()"
+        >
+          <option value="">Toutes les catégories</option>
+          <option *ngFor="let categorie of categorieList" [value]="categorie.id">
+            {{ categorie.nom }}
+          </option>
+        </select>
+      </div>
+  
+    <!-- Titre de la liste -->
+    <h2>Liste des Produits :</h2>
+  
+    <!-- Tableau des produits -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Référence</th>
+          <th>Description</th>
+          <th>Prix Unitaire</th>
+          <!--Partie pour modifier ou supprimer un produit-->
+          <!--<th>Actions</th>-->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produitList">
+          <td>{{ produit.reference }}</td>
+          <td>{{ produit.description }}</td>
+          <td>{{ produit.prixUnitaire }} DH</td>
+          <!--Partie pour modifier ou supprimer un produit-->
+          <!--<td class="actions">
+            <button class="btn btn-edit">Modifier</button>
+            <button class="btn btn-delete">Supprimer</button>
+          </td>-->
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Message si aucun produit -->
+    <div *ngIf="produitList.length === 0" class="empty-message">
+      Aucun produit disponible pour cette catégorie.
+    </div>
+  </div>
+  
